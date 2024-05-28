@@ -1,0 +1,76 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f0f4f7; 
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #144667;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5da;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #144667; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d3344; 
+}
+
+#backToProductPageBtn {
+    float: right;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+    background-color: #e9f1f7;
+    color: #333;
+}
+
+th {
+    background-color: #144667;
+    color: #ffffff;
+}
+
+tbody tr:hover {
+    background-color: #d6e4ec; 
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
