@@ -1,7 +1,7 @@
 
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
   import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"
-  import {getAuth, signInWithEmailAndPassword,getData} from "https://cdnjs.cloudflare.com/ajax/libs/firebase/10.12.0/firebase-auth.js";
+  import {getAuth, signInWithEmailAndPassword} from "https://cdnjs.cloudflare.com/ajax/libs/firebase/10.12.0/firebase-auth.js";
 
 
   const firebaseConfig = {
@@ -20,26 +20,23 @@
   const signInBtn = document.getElementById("signInBtn");
 
 
-  const signin = async () => {
+  async function signIn() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     try {
-    signInWithEmailAndPassword(db, auth, email, password,)
-      .then((userCredential) => {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
-        console.log(user);
-        alert("user signed in successfully");
-      window.location.href = 'userPage.html';
-      })
-
+        alert("User signed in successfully!");
+      
+        
+        window.location.href = 'userPage.html';
     } catch (error) {
-      console.error("Error signing in:", error.message);
-      alert("Error signing in: " + error.message);
-
-  }
+        console.error("Error signing in:", error.message);
+        alert("Error signing in: " + error.message);
+    }
 }
-  
-signInBtn.addEventListener("click", signin);
+
+signInBtn.addEventListener("click", signIn);
 
 
 
